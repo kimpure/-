@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노페어 전역까지</title>
+    <style>
+        .main {
+            text-align: center;
+        }
+        .전역일 {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 class="title">전역까지 : </h1>
+        <h6 class="전역일">전역일 : 2025년01월09일 (목요일)</h6>
+    </div>
+    <script>
+        window.onload = () => {
+            const title = document.querySelector('.title')
+            
+            let 전역일 = new Date("2025-01-09:00:00:00+0900");
+            let 남은시간 = Math.floor((전역일 - new Date())/1000);
+
+            let secInMs = Math.floor((전역일 - new Date()) / 1000)
+            let minInMs = Math.floor(secInMs / 60)
+            let hourInMs = Math.floor(minInMs / 60)
+            let days = Math.floor(hourInMs / 24)
+
+            seconds = secInMs % 60,
+            minutes = minInMs % 60,
+            hours = minutes % 24;
+
+            title.textContent = `전역까지 : ${days} 일 ${hours} 시간 ${minutes} 분 ${seconds} 초`
+            setInterval(() => {
+                secInMs = Math.floor((전역일 - new Date()) / 1000)
+                minInMs = Math.floor(secInMs / 60)
+                hourInMs = Math.floor(minInMs / 60)
+                days = Math.floor(hourInMs / 24)
+
+                seconds = secInMs % 60,
+                minutes = minInMs % 60,
+                hours = minutes % 24;
+
+                title.textContent = `전역까지 : ${days} 일 ${hours} 시간 ${minutes} 분 ${seconds} 초`
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
