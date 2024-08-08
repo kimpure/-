@@ -16,13 +16,14 @@
 <body>
     <div class="main">
         <h1 class="title">전역까지 : </h1>
-        <h6 class="전역일">전역일 : 2025년01월09일 (목요일)</h6>
+        <h6 class="전역일">전역일 : 2025년02월09일 (일요일)</h6>
     </div>
-    <script>
+
+
+    <script type="text/javascript">
         window.onload = () => {
             const title = document.querySelector('.title')
-            
-            let 전역일 = new Date("2025-01-09:00:00:00+0900");
+            let 전역일 = new Date("2025-02-09:00:00:00+0900");
             let 남은시간 = Math.floor((전역일 - new Date())/1000);
 
             let secInMs = Math.floor((전역일 - new Date()) / 1000)
