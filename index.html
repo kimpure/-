@@ -23,7 +23,7 @@
     <script type="text/javascript">
         window.onload = () => {
             const title = document.querySelector('.title')
-            let 전역일 = new Date("2025-02-09:00:00:00+0900");
+            let 전역일 = new Date(2025, 2, 9, 0, 0, 0)
             let 남은시간 = Math.floor((전역일 - new Date())/1000);
 
             let secInMs = Math.floor((전역일 - new Date()) / 1000)
